@@ -1,29 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- Barcode Reader fragment -->
-    <fragment
-        android:id="@+id/barcode_fragment"
-        android:name="info.androidhive.barcode.BarcodeReader"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:auto_focus="true"
-        app:use_flash="false" />
+    <TextView
+        android:id="@+id/tv_mat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_material"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Scanner overlay animation -->
-    <info.androidhive.barcode.ScannerOverlay
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#44000000"
-        app:line_color="#7323DC"
-        app:line_speed="6"
-        app:line_width="4"
-        app:square_height="200"
-        app:square_width="200" />
+    <Button
+        android:layout_margin="8dp"
+        android:id="@+id/scan_qr_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Отсканировать QR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mat" />
 
-</RelativeLayout>
+    <Button
+        android:layout_margin="8dp"
+        android:id="@+id/show_alert_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="По номеру"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/scan_qr_btn"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mat" />
+
+
+
+    <TextView
+        android:paddingTop="20dp"
+        android:id="@+id/tv_pack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/pack"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/show_alert_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/scan_pack_qr_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Отсканировать QR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pack" />
+
+    <Button
+        android:id="@+id/show_pack_alert_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="По номеру"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/scan_qr_btn"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pack" />
+
+</android.support.constraint.ConstraintLayout>
