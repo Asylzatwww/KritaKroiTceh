@@ -11,61 +11,96 @@
         android:id="@+id/tv_mat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="@string/get_material"
         android:textSize="18sp"
-        android:layout_margin="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_margin="8dp"
         android:id="@+id/scan_qr_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Отсканировать QR"
+        android:layout_margin="8dp"
+        android:text="@string/scan_qr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_mat" />
 
     <Button
-        android:layout_margin="8dp"
         android:id="@+id/show_alert_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="По номеру"
+        android:layout_margin="8dp"
+        android:text="@string/by_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/scan_qr_btn"
         app:layout_constraintTop_toBottomOf="@+id/tv_mat" />
 
 
-<!--
     <TextView
-        android:paddingTop="20dp"
-        android:id="@+id/tv_pack"
-        android:layout_width="wrap_content"
+        android:text="@string/sewer1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/pack"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/show_alert_btn"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:padding="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/show_alert_btn" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/scan_qr_btn">
+
+        <TextView
+            android:id="@+id/tv_pack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="@string/pack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_alert_btn" />
+
+        <RadioButton
+            android:id="@+id/get_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/get" />
+
+        <RadioButton
+            android:id="@+id/give_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/give" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/scan_pack_qr_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Отсканировать QR"
+        android:text="@string/scan_qr"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pack" />
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_main" />
 
     <Button
         android:id="@+id/show_pack_alert_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="По номеру"
+        android:text="@string/by_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/scan_qr_btn"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pack" />-->
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_main" />
 
 </android.support.constraint.ConstraintLayout>

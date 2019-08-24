@@ -8,6 +8,7 @@ import android.util.SparseArray;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.barcode.Barcode;
+import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class QrScannerActivity extends AppCompatActivity implements BarcodeReade
     int fromSklad;
     int sklad_id;
     int mode;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +73,7 @@ public class QrScannerActivity extends AppCompatActivity implements BarcodeReade
 
         NetworkService.getInstance()
                 .getApi()
-                .getModelWithId(displayValue,fromSklad)
+                .getModelWithId(displayValue,sklad_id)
                 .enqueue(new Callback<List<Item>>() {
                     @Override
                     public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {

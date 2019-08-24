@@ -1,16 +1,21 @@
 <resources>
     <string name="app_name">Цех</string>
-    <string name="confirm">Confirm</string>
+    <string name="confirm">Подвердить</string>
     <string name="put">Внести</string>
-    <string name="get_material">Принять ткань на крой</string>
+    <string name="get_material">Принять крой</string>
     <string name="error">Ошибка</string>
     <string name="success">Операция успешно выполнена</string>
     <string name="change">изменить</string>
-    <string name="get">принять крой на ткань</string>
+    <string name="get_kroi">принять крой </string>
+    <string name="give">Отдать</string>
+    <string name="get">Принять</string>
     <string name="wrong_id">Нет данных по данному запросу</string>
     <string name="enter_model">Введите модель</string>
     <string name="cancel">Отмена</string>
     <string name="search">Найти</string>
-    <string name="pack">Упаковать готовый крой</string>
+    <string name="pack">Крой</string>
+    <string name="sewer1">Швея №1</string>
+    <string name="scan_qr">Отсканировать QR</string>
+    <string name="by_number">По номеру</string>
 
 </resources>
