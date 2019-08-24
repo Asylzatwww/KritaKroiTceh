@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader;
+package fashion.krista.barcodereader_kroi;
 
 
 import android.support.v4.app.FragmentTransaction;

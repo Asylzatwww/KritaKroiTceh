@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader;
+package fashion.krista.barcodereader_kroi;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-import fashion.krista.barcodereader.Retrofit.NetworkService;
+import fashion.krista.barcodereader_kroi.Retrofit.NetworkService;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

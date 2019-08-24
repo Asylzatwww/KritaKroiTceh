@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader.Retrofit;
+package fashion.krista.barcodereader_kroi.Retrofit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

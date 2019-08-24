@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader;
+package fashion.krista.barcodereader_kroi;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

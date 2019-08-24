@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader;
+package fashion.krista.barcodereader_kroi;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import fashion.krista.barcodereader.Retrofit.NetworkService;
-import fashion.krista.barcodereader.model.Item;
+import fashion.krista.barcodereader_kroi.Retrofit.NetworkService;
+import fashion.krista.barcodereader_kroi.model.Item;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.scan_qr_btn).setOnClickListener(this);
         findViewById(R.id.show_alert_btn).setOnClickListener(this);
-        findViewById(R.id.scan_pack_qr_btn).setOnClickListener(this);
-        findViewById(R.id.show_pack_alert_btn).setOnClickListener(this);
+//        findViewById(R.id.scan_pack_qr_btn).setOnClickListener(this);
+//        findViewById(R.id.show_pack_alert_btn).setOnClickListener(this);
     }
 
     @Override
@@ -43,15 +43,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.scan_qr_btn:
                 Intent intent = new Intent(MainActivity.this, QrScannerActivity.class);
-                intent.putExtra("sklad_id",10);
+                intent.putExtra("sklad_id",14);
                 intent.putExtra("mode",0);
-                intent.putExtra("from_sklad_id",1163);
+                intent.putExtra("from_sklad_id",13);
                 startActivity(intent);
                 break;
             case R.id.show_alert_btn:
-                showDialog(10,1163,0);
+                showDialog(14,13,0);
                 break;
-            case R.id.scan_pack_qr_btn:
+           /* case R.id.scan_pack_qr_btn:
                 Intent intentPack = new Intent(MainActivity.this, QrScannerActivity.class);
                 intentPack.putExtra("sklad_id",13);
                 intentPack.putExtra("mode",1);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.show_pack_alert_btn:
                 showDialog(13,10,1);
-                break;
+                break;*/
         }
     }
 

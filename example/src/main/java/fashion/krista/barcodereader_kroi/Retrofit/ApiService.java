@@ -1,8 +1,8 @@
-package fashion.krista.barcodereader.Retrofit;
+package fashion.krista.barcodereader_kroi.Retrofit;
 
 import java.util.List;
 
-import fashion.krista.barcodereader.model.Item;
+import fashion.krista.barcodereader_kroi.model.Item;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader.model;
+package fashion.krista.barcodereader_kroi.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

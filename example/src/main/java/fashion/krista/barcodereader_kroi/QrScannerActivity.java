@@ -1,4 +1,4 @@
-package fashion.krista.barcodereader;
+package fashion.krista.barcodereader_kroi;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 import java.util.List;
 
 import fashion.krista.barcode.BarcodeReader;
-import fashion.krista.barcodereader.Retrofit.NetworkService;
-import fashion.krista.barcodereader.model.Item;
+import fashion.krista.barcodereader_kroi.Retrofit.NetworkService;
+import fashion.krista.barcodereader_kroi.model.Item;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -81,7 +81,7 @@ public class QrScannerActivity extends AppCompatActivity implements BarcodeReade
                             if (item.size() > 0) {
                                 if ((item != null ? item.get(0).getQty() : 0) > 0) {
                                     intent.putExtra("qty", item.get(0).getQty());
-                                    intent.putExtra("sklad_id", 10);
+                                    intent.putExtra("sklad_id", sklad_id);
                                     intent.putExtra("mode", 0);
                                     intent.putExtra("from_sklad_id", fromSklad);
                                     intent.putExtra("model_id", item.get(0).getModelSeriesId());

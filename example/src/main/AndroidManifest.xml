@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fashion.krista.barcodereader">
+    package="fashion.krista.barcodereader_kroi">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,23 +14,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="fashion.krista.barcodereader.MainActivity">
+        <activity android:name="fashion.krista.barcodereader_kroi.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="fashion.krista.barcodereader.CountActivity" />
+        <activity android:name="fashion.krista.barcodereader_kroi.CountActivity" />
         <activity
-            android:name="fashion.krista.barcodereader.QrScannerActivity"
+            android:name="fashion.krista.barcodereader_kroi.QrScannerActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="fashion.krista.barcodereader.BarcodeFragmentTestActivity"
+            android:name="fashion.krista.barcodereader_kroi.BarcodeFragmentTestActivity"
             android:screenOrientation="portrait" />
     </application>
 

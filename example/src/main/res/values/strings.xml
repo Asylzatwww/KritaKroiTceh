@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Закройный</string>
+    <string name="app_name">Цех</string>
     <string name="confirm">Confirm</string>
     <string name="put">Внести</string>
     <string name="get_material">Принять ткань на крой</string>
