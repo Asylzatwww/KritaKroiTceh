@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(DialogInterface dialog, int which) {
                 String input = editText.getText().toString().trim();
                 if (input.length() > 0) {
-                    getData(input, sklad_id, fromSklad, mode);
+                        getData(input, sklad_id, fromSklad, mode);
                     progressDialog.show();
                 }
             }
@@ -134,13 +134,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void getData(final String input, final int sklad_id, final int fromSklad, final int mode) {
 
-        NetworkService.getInstance().getApi().getModelWithId(input, sklad_id).enqueue(new Callback<List<Item>>() {
+        NetworkService.getInstance().getApi().getModelWithId(input, fromSklad).enqueue(new Callback<List<Item>>() {
             @Override
             public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {
+                progressDialog.dismiss();
                 if (response.isSuccessful()) {
                     Intent intent = new Intent(MainActivity.this, CountActivity.class);
 
-                    progressDialog.dismiss();
                     if (response.isSuccessful()) {
                         List<Item> item = response.body();
 

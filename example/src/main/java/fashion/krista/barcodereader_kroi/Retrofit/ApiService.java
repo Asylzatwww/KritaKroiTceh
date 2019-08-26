@@ -13,16 +13,16 @@ public interface ApiService {
 
 
     //    color-series-search?
-    @GET("post-api/search?")
-    Call<List<Item>> getModelWithId(@Query("model_size_id") String code, @Query("sklad_id") int from_sklad_id);
+    @GET("post-api/color-series-search?")
+    Call<List<Item>> getModelWithId(@Query("model_series_id") String code, @Query("from_sklad_id") int from_sklad_id);
 
     // get /post-api/search?model_size_id=408042&sklad_id=985
     @GET("post-api/search?")
     Call<List<Item>> getSewer(@Query("model_size_id") String code, @Query("klad_id") int from_sklad_id);
 
-    @POST("post-api/move?")
+    @POST("post-api/color-series-move?")
     Call<ResponseBody> postModel(
-            @Query("model_size_id") String code,
+            @Query("model_series_id") String code,
             @Query("sklad_id") String skladId,
             @Query("from_sklad_id") int from_skladId,
             @Query("qty") int qty);
